@@ -1,11 +1,18 @@
-public class App {
+public class App{
     public static void main(String[] args) {
-        int number = 29;
-        System.out.println(number + (isPrime(number) ? " is prime" : " is not prime"));
-    }
-    public static boolean isPrime(int n) {
-        if (n <= 1) return false;
-        for (int i = 2; i <= Math.sqrt(n); i++) if (n % i == 0) return false;
-        return true;
+        int n = 10; // Number of terms to print
+        int firstTerm = 0;
+        int secondTerm = 1;
+
+        System.out.println("Fibonacci Series till " + n + " terms:");
+
+        for (int i = 1; i <= n; ++i) {
+            System.out.print(firstTerm + ", ");
+
+            // Compute the next term
+            int nextTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
     }
 }
