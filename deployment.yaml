@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: java-app
-        # Remove the angle brackets from your DockerHub username
+   
         image: alvinbabu/java-app:latest
         ports:
         - containerPort: 8080
